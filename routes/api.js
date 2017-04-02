@@ -90,8 +90,7 @@ router.route('/posts/:id')
 
 router.route('/finduser/:user')
 .get(function(req,res){
-	console.log("testing this route:");
-	console.log(req.params.user);
+	
 	User.findOne({username:req.params.user},function(err,user){
 		if(err)
 			res.send(err);

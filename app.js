@@ -13,25 +13,14 @@ var index = require('./routes/index');
 var api = require('./routes/api');
 var authenticate = require('./routes/authenticate')(passport);
 var mongoose = require('mongoose');                         //add for Mongo support
-//mongoose.connect('mongodb://admin:admin@tastbaar.mongo.xervo.io:27017/pyma2zeV',function(err){
-//    if(err)
-//        console.log(err);
-//    else
-//    {
-//        console.log("connected to db");
-//    }
-//}); 
-
-
-
-mongoose.connect('mongodb://localhost:27017/chirp',function(err){
+mongoose.connect('mongodb://admin:admin@tastbaar.mongo.xervo.io:27017/pyma2zeV',function(err){
     if(err)
         console.log(err);
     else
     {
         console.log("connected to db");
     }
-});    
+}); 
 var app = express();
 
 // view engine setup

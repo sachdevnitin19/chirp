@@ -9,10 +9,10 @@ var app = angular.module('chirpApp', ['ngRoute', 'ngResource']).run(function($ro
 	};
 
 	$rootScope.search=function(user){
-		console.log("testing search option:"+user);
+		
 		$http.get('/api/finduser/'+user).then(function(data)
 			{
-				console.log(data.data);
+				
 				if(data.data.success)
 				{
 					$rootScope.searcheduser=data.data.user;
@@ -21,12 +21,12 @@ var app = angular.module('chirpApp', ['ngRoute', 'ngResource']).run(function($ro
 					$rootScope.postbyuser.forEach(function(i){
 						$rootScope.j++;
 					})
-					console.log("no of post by this user:"+$rootScope.j);
+					
 					$location.path('/stats');	
 				}
 				else if(!data.data.success)
 				{
-					console.log(data.data.message);
+					
 					$location.path('/');
 					window.alert(data.data.message+", Enter correct username.");
 				}
