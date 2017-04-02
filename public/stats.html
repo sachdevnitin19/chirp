@@ -1,0 +1,14 @@
+<div id="post-stream">
+
+<h1>User Statistics</h1>
+<br>
+	<h4>Total no of posts by "{{searcheduser}}" : {{j}}</h4>
+		<br>
+		<h4>Posts by "{{searcheduser}}"</h4>
+		<br>
+		<div class="post" ng-repeat="post in postbyuser | orderBy:'created_at':true" ng-class-odd="'odd'" ng-class-even="'even'"> 
+			<p>{{post.text}}</p>
+			<small>Posted by @{{post.created_by}}</small>
+			<small class="pull-right">{{post.created_at | date:"h:mma 'on' MMM d, y"}}</small>
+		</div>
+</div>

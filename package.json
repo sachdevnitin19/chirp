@@ -1,0 +1,22 @@
+{
+  "name": "Start",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "*",
+    "body-parser": "*",
+    "cookie-parser": "*",
+    "debug": "*",
+    "ejs": "*",
+    "express": "*",
+    "express-session": "*",
+    "mongoose": "*",
+    "morgan": "*",
+    "passport": "*",
+    "passport-local": "*",
+    "serve-favicon": "*"
+  }
+}
